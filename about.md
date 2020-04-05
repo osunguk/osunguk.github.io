@@ -16,26 +16,43 @@ title: About Osunguk
 ### Stack
 
 - Python
+
   파이썬을 이용하여 간단한 데이터 처리를 할 수 있습니다
+
 - Django
+
   기초적인 restful 백엔드 서버를 작업할 수 있습니다
+
 - JavaScript
+
   ECMAScript 6 을 준수하며 DOM 조작을 할 수 있습니다
+
 - React
+
   SPA 를 구성할 수 있습니다
+
 - React-Native
+
   아주 기초적인 정도의 앱을 만들 수 있습니다
+
 - Android (native)
+
   초급 수준으로 동작 원리 정도만 간략하게 알고 있습니다
 
-
+---
 
 ### Toy Project
 
 - github.io 블로그 (개발중)
+
   현재 꾸려나가고 있는 블로그 입니다
+  
   [개인 블로그 주소](https://osunguk.github.io/)
+
 - chekchekchek (개발중)
+
   책 정보 및 판매 정보 를 바탕으로 진행한 책 추천 & 개인 서재 서비스 입니다
+
   [github 주소](https://github.com/osunguk/chekchekchek)
+
 
