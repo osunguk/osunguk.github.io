@@ -55,7 +55,7 @@ https://rubyinstaller.org/ 에 접속해서 설치하면 끝!
 
 \* *여기서 각 테마마다 설정 방법과 적용하는 방법이 각기 다를 수 있으니 해당 저장소의 README.md 파일을 꼼꼼하게 읽어주세요!!* \*
 
-Fork를 하고 clone을 하면 디렉토리는 다음과 같습니다.
+```Fork```를 하고 ```clone```을 하면 디렉토리는 다음과 같습니다.
 
 ![image-20200405194638715](C:\Users\osk\AppData\Roaming\Typora\typora-user-images\image-20200405194638715.png)
 
@@ -65,21 +65,36 @@ Fork를 하고 clone을 하면 디렉토리는 다음과 같습니다.
 
   - head.html
     
+    화면상 고정되어있는 head 입니다
+    
+    CSS 와 Icon 과 RSS 를 link 합니다
+
   - sidebar.html
+    
+    화면 옆쪽에 뜨는 sidebar 입니다
+    
     
 
 - _layouts
 
   - default.html
     
+    모든 화면의 기본을 잡아주는 html 입니다. head와 sidebar를 불러오고 content와 sidebar에 관한 script를 가지고 있습니다.
+    
   - page.html
+    
+    페이지의 기본 틀입니다 (사이드바에 들어가는 page)
     
   - post.html
     
+    게시물의 기본 틀입니다
 
 - _posts
   
-
+글을 작성할 때 해당 디렉토리에 md 파일을 생성해서 글을 씁니다.
+  
+  제목을 쓸 때는 YYYY-MM-DD-post-name.md 형식으로 작성하면 됩니다.
+  
 - public
 
   - /css
