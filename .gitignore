@@ -43,6 +43,10 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 
+
+### image ###
+image/
+
 # End of https://www.gitignore.io/api/jekyll
 
 # grunt-html-validation
