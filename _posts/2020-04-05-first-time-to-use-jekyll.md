@@ -15,19 +15,19 @@ title: 처음 사용해보는 jekyll 블로그
 
 먼저 ruby 를 설치하고 jekyll 을 설치하는 건 어느 개발자라도 쉽게 할 수 있을 것이다.
 
-![image-20200405155529275](C:\Users\osk\AppData\Roaming\Typora\typora-user-images\image-20200405155529275.png)
+![Imgur](https://i.imgur.com/gP7drOy.png)
 
-https://rubyinstaller.org/ 에 접속해서 설치하면 끝!
+[https://rubyinstaller.org/](https://rubyinstaller.org/) 에 접속해서 설치하면 끝!
 
 그다음
 
-![image-20200405155936775](C:\Users\osk\AppData\Roaming\Typora\typora-user-images\image-20200405155936775.png)
+![Imgur](https://i.imgur.com/86qkieN.png)
 
 다음과 같이 루비가 설치가 되면 루비 프롬프트를 열 수 있다
 
 프롬프트를 열고 지킬을 설치 해주면 된다. ```gem install jekyll``` 명령어로 지킬을 설치해 주면 끝!
 
-![image-20200405160238559](C:\Users\osk\AppData\Roaming\Typora\typora-user-images\image-20200405160238559.png)
+![Imgur](https://i.imgur.com/XbqJRQd.png)
 
 다음과 같이 뜬다면 성공
 
@@ -35,11 +35,11 @@ https://rubyinstaller.org/ 에 접속해서 설치하면 끝!
 
 ### github 저장소 생성
 
-![image-20200405193036773](C:\Users\osk\AppData\Roaming\Typora\typora-user-images\image-20200405193036773.png)
+![Imgur](https://i.imgur.com/tzFNRDn.png)
 
 자신의 깃 허브에 add repository 를 눌러 Repository name * 에다가 아래와 같이 자신의 이름을 넣고 저장소를 생성하면 완료!! 간단하다!!
 
-![image-20200405193006224](C:\Users\osk\AppData\Roaming\Typora\typora-user-images\image-20200405193006224.png)
+![Imgur](https://i.imgur.com/my0Wzmv.png)
 
 위와 같이 생성하면 끝!
 
@@ -49,7 +49,7 @@ https://rubyinstaller.org/ 에 접속해서 설치하면 끝!
 
 내가 사용한 테마는 [lanyon](https://github.com/poole/lanyon) 심플하고 간단하게 보이는 테마를 골랐다. 
 
-![image-20200405193506436](C:\Users\osk\AppData\Roaming\Typora\typora-user-images\image-20200405193506436.png)
+![Imgur](https://i.imgur.com/xJ8MoeL.png)
 
 해당 테마의 깃 주소로 들어가서 우측의 ```Fork``` 버튼을 눌러 다운 받으면 된다. ~~(star 눌리는 건 예의겠죠??)~~
 
@@ -57,7 +57,7 @@ https://rubyinstaller.org/ 에 접속해서 설치하면 끝!
 
 ```Fork``` 를 하고 ```clone```을 하면 디렉토리는 다음과 같다.
 
-![image-20200405194638715](C:\Users\osk\AppData\Roaming\Typora\typora-user-images\image-20200405194638715.png)
+![Imgur](https://i.imgur.com/TPIjcTf.png)
 
 간단하게 설명을 붙이면
 
@@ -151,7 +151,7 @@ https://rubyinstaller.org/ 에 접속해서 설치하면 끝!
 
 ### 마무리
 
-http://themes.jekyllrc.org/ 로 들어가면 정말 다양한 Theme 를 볼 수 있다.
+[http://themes.jekyllrc.org/](http://themes.jekyllrc.org/) 로 들어가면 정말 다양한 Theme 를 볼 수 있다.
 
 각각의 Theme 마다 특징들이 있고, 각자만의 구조를 가지고 있기 때문에 해당 Theme의 document 를 꼼꼼하게 읽어 보기를 추천한다.
 
@@ -165,10 +165,10 @@ jekyll 이라는 정적 사이트 생성기에 대한 이해가 없는 상태로
 
 ### Reference
 
-https://jetalog.net/86
+[https://jetalog.net/86](https://jetalog.net/86)
 
-https://shryu8902.github.io/_posts/2018-06-22-jekyll-on-windows/
+[https://shryu8902.github.io/_posts/2018-06-22-jekyll-on-windows/](https://shryu8902.github.io/_posts/2018-06-22-jekyll-on-windows/)
 
 [구글 검색](https://www.google.com/search?sxsrf=ALeKk01upV1JcU3Vs0brSQG2pzJlcdONWA%3A1586070487927&ei=14OJXvOdOJDx0gTY2Z_ADQ&q=%EC%9C%88%EB%8F%84%EC%9A%B0+jekyll+%EB%B8%94%EB%A1%9C%EA%B7%B8&oq=%EC%9C%88%EB%8F%84%EC%9A%B0+jekyll+%EB%B8%94%EB%A1%9C%EA%B7%B8&gs_lcp=CgZwc3ktYWIQAzIECCMQJ0oQCBcSDDEwLTEzMmcwZzExMUoMCBgSCDEwLTFnMGcyUPAVWPAVYLIoaABwAHgAgAF9iAHWApIBAzAuM5gBAKABAaoBB2d3cy13aXo&sclient=psy-ab&ved=0ahUKEwiz5ZWA3dDoAhWQuJQKHdjsB9gQ4dUDCAw&uact=5](https://www.google.com/search?sxsrf=ALeKk01upV1JcU3Vs0brSQG2pzJlcdONWA%3A1586070487927&ei=14OJXvOdOJDx0gTY2Z_ADQ&q=윈도우+jekyll+블로그&oq=윈도우+jekyll+블로그&gs_lcp=CgZwc3ktYWIQAzIECCMQJ0oQCBcSDDEwLTEzMmcwZzExMUoMCBgSCDEwLTFnMGcyUPAVWPAVYLIoaABwAHgAgAF9iAHWApIBAzAuM5gBAKABAaoBB2d3cy13aXo&sclient=psy-ab&ved=0ahUKEwiz5ZWA3dDoAhWQuJQKHdjsB9gQ4dUDCAw&uact=5))
 
-https://jamiekang.github.io/2017/04/28/working-jekyll-locally/
+[https://jamiekang.github.io/2017/04/28/working-jekyll-locally/](https://jamiekang.github.io/2017/04/28/working-jekyll-locally/)
