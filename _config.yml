@@ -1,15 +1,15 @@
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
-# permalink:           pretty
-# relative_permalinks: true
+permalink:           pretty
+relative_permalinks: true
 
 # Setup
 title:               오성국 블로그
 tagline:             '이것저것 끄적끄적'
 description:         '1년차 개발자, Python Django Flask JavaScript Nodejs React React-Native Android 등을 사용해 보았습니다.'
 url:                 http://lanyon.getpoole.com
-baseurl:             
+baseurl:             ''
 paginate:            5
 
 # About/contact
