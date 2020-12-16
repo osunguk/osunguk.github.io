@@ -1,6 +1,6 @@
 ---
-layout: post
-title: 코드 스테이츠 주차
+ layout: post
+title: 코드 스테이츠 2주차
 
 ---
 
@@ -102,7 +102,7 @@ myFunction(...args); // 이런식으로 args 를 전달할 때 간편하게 넘�
 
 3. [] === [] ? Primitive and reference
 
-이에 대한 가장 직관적인 이미지가 있어서 가져와봤다.
+이에 대한 가장 직관적인 이미지가 있어서 가져와봤다. (Primitive 자료형에 symbol 도 있다.)
 
 ![js-types](https://i.imgur.com/Pe3Snt1.png)
 
@@ -148,6 +148,47 @@ for (let i of iterable) {
 <br>
 
 ## 화요일
+
+1. typeof null 이 object 인 이유
+
+개발자의 실수로 인해 if 문 하나가 빠져서 null 타입을 체크하는 구문이 빠졌다고 한다. 수정을 했지만 수정하면서 생기는 버그들이 많아서 수정을 포기했다고 한다... ㄸㄹㄹ...
+
+그러면 어떻게 null 의 타입을 확인 해야 할까?
+
+```javascript
+let valueNull = null;
+if(valueNull === null) // 이런식으로 타입을 찾아야 한다.
+```
+
+다시한번 레거시 코드가 얼마나 무서운지 깨닫는다...
+
+<br>
+
+2. 클로저 & 스코프
+
+이에 대한 설명은 너무 길어져서 따로 주제로 선정해 포스팅을 하겠다
+
+- [ ] 클로저 & 스코프 주제로 게시물 포스팅 하기
+
+3. const 객체 의 값이 바뀌는 이유
+
+```javascript
+const obj = {};
+const temp = obj; 
+// 2번째 줄에서 temp에 들어가는 값는? => obj 객체의 주소값이 들어간다
+// 따라서 const 로 보호되는 값은 obj 의 key,value 의 값이 아니라 주소값이 보호된다
+
+const obj2 = {};
+obj = obj2 // 이 구분을 실행하면 "Assignment to constant variable." 에러가 발생한다!
+```
+
+<br>
+
+4. https://poiemaweb.com/ 여기 사이트 대다나다... 정독정독 하기!!
+
+html, css, js, sass, bootstrap 등등... 방대한 자료를 아주 고급진 설명과 함께 게시되어 있다. JS 부분이 37세션으로 매우매우 디테일하게 설명 되어있는데 학습 진도와 같이 읽는다면 많은 도움이 될지 싶다!! (주말에 몰아봐야징..... ㅎ)
+
+4. JS Symbol 
 
 
 
