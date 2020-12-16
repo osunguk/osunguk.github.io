@@ -40,8 +40,11 @@ body {
   overflow-x: hidden;
 }
 
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+
 html {
-  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+  font-family: "NanumSquare", "PT Serif", Georgia, "Times New Roman", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
