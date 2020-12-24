@@ -22,6 +22,9 @@
         {% if node.layout == "page" %}
           <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
         {% endif %}
+        {% if node.layout == "category" %}
+          <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+        {% endif %}
       {% endif %}
     {% endfor %}
     <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
