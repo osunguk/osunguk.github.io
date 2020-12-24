@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 코드 스테이츠 2주차
+categories: [codestates]
 ---
 
 코드 스테이츠를 통해 배운 것을 정리하는 post

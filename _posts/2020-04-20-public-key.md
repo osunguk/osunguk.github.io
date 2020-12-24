@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 키페어? Key 와 암호에 대한 정리
+categories: [dev]
 ---
 
 EC2 인스턴스를 생성하는 과정에서 다음과 같은 창을 보게 되었다.
