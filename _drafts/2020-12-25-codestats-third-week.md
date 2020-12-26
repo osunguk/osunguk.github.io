@@ -120,5 +120,16 @@ html 과 css 구조 잡는 것에 대한 심도있는 블로깅을 해야겠다�
 
 1. Merry Christmas!!
 
+<br>
+
 ## 주말
 
+1. 고차함수 - 더 생각해 볼 주제 공부
+
+- MapReduce 학습하기
+- 자바스크립트에서 커링(currying)과 클로져(closure)의 차이 이해
+- 선언형 프로그래밍(declarative programming)과 절차형 프로그래밍(imperative programming)의 차이
+  - 배열 메소드를 통해 이해하기
+- 함수의 조합(function composition)에 대해 학습하기 (javascript function composition)
+
+를 정리했고, 배열 메소드를 통해 이해하기를 제외하고 전부 공부를 했다.
