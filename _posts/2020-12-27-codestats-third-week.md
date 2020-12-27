@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 코드 스테이츠 주차
+categories: [codestates]
 ---
 
 코드 스테이츠를 통해 배운 것을 정리하는 post
@@ -118,7 +119,7 @@ html 과 css 구조 잡는 것에 대한 심도있는 블로깅을 해야겠다�
 
 ## 금요일
 
-1. Merry Christmas!!
+**:christmas_tree: ​Merry Christmas!! :christmas_tree:**
 
 <br>
 
@@ -133,3 +134,65 @@ html 과 css 구조 잡는 것에 대한 심도있는 블로깅을 해야겠다�
 - 함수의 조합(function composition)에 대해 학습하기 (javascript function composition)
 
 를 정리했고, 배열 메소드를 통해 이해하기를 제외하고 전부 공부를 했다.
+
+2. DOM 이해하기
+
+모든 html 태그를 순환하는 코드를 작성했다.
+
+```javascript
+function consoleLogAllElement() {
+  console.log('모든 태그를 출력하는 함수입니다!');
+  const body = document.getElementsByTagName('body');
+  const elements = body[0].children;
+
+  console.log(elements);
+
+  cycle(elements);
+
+  // console.log(body[0].childNodes); 
+  // childNodes 는 모든 노드를 불러 오는듯 보인다
+  // text 라는 요소가 있는데 정확히 어떤 부분인지 모르겠다
+
+  // console.log(body[0].children); 
+  // children 은 원하는 기능인 하위 element의 요소를 리턴한다.
+
+  // console.log(body[0].childElementCount); 
+  // 직계자식들의 엘리먼트의 숫자를 반환
+}
+
+function cycle(elements) {
+  for (element of elements) {
+    if (isHaveChildren(element)) {
+      console.log(element);
+      cycle(element.children);
+    } else {
+      console.log(element);
+    }
+  }
+
+}
+
+function isHaveChildren(e) {
+  if (e.childElementCount > 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
+consoleLogAllElement();
+```
+
+정확한 코드인지는 모르겠으나 모두 출력하긴한다. 재귀 개념을 도입해봤는데 만족스럽다.
+
+<br>
+
+3. DOM 조작하기
+
+4. JS 주제 블로깅 하나 하기!!
+
+- [ ] 하나
+- [ ] 둘
+- [ ] 셋
+
