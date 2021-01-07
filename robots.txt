@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://osunguk.github.io/sitemap.xml
