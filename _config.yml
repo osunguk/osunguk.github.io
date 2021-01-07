@@ -4,7 +4,7 @@ permalink:           pretty
 title:               오성국 블로그
 tagline:             '이것저것 끄적끄적'
 description:         '1년차 개발자, Python Django Flask JavaScript Nodejs React React-Native Android 등을 사용해 보았습니다.'
-url:                 http://lanyon.getpoole.com
+url:                 https://github.com/osunguk
 baseurl:             ''
 paginate:            5
 
