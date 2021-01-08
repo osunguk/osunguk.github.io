@@ -11,7 +11,9 @@ categories: [javascript]
 - 커링 기술과 함께 파라미터를 유연하게 받기 위한 기술로써 쓰인다.
 - 고차함수 메서드에서 펙토리 패턴처럼 사용할 수 있다.
 
-#### MDN 에서는 클로저를 다음과 같이 정의한다.
+<br>
+
+### MDN 에서는 클로저를 다음과 같이 정의한다.
 
 > 함수와 함수가 선언된 어휘적 환경의 조합이다.
 
@@ -37,7 +39,7 @@ function foo(){ // 외부 함수
 
 <br>
 
-#### 내부 변수를 private 하게
+### 내부 변수를 private 하게
 
 ```javascript
 function book(title) {
@@ -69,7 +71,7 @@ console.log(coding.get_title()); // Code
 
 <br>
 
-#### 커링를 사용한다면
+### 커링를 사용한다면
 
 먼저 커링에 대해 간단하게 설명을 하자면
 
@@ -119,7 +121,7 @@ console.log(threeArmt2);
 
 <br>
 
-#### 펙토리 패턴같이 사용하면
+### 펙토리 패턴같이 사용하면
 
 주로 고차함수 개념이 녹아 있는 map, filter, reduce 에서 사용할 수 있다.
 
