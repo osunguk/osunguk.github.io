@@ -17,9 +17,9 @@ categories: [codestates]
 
 git 연습사이트 마지막까지 다 풀기 (원격작업 merge 까지 진행)
 
-(화요일) ~~자바스크립트 info 페이지 정리 (1개)~~ 두개 더 하기 
+(화요일) ~~자바스크립트 info 페이지 정리 (1개)~~ (일요일) ~~두개 더 하기~~
 
-git rebase 정리하기
+(목요일) ~~git rebase 정리하기~~
 
 <br>
 
@@ -45,7 +45,7 @@ git rebase 정리하기
 
 [3일 동안 헤매는 문제](https://programmers.co.kr/learn/courses/30/lessons/64062) 를 풀다가 도저히 이대로가다간 시간만 버릴것 같아서 여기서 효율성 알고리즘으로 사용하는 이진 탐색 알고리즘부터 구현하기로 했다.
 
-이진 탐색 알고리즘의 시간 복잡도는 순차탐색이 N 제곱인 반면 로그2N이다. 
+이진 탐색 알고리즘의 시간 복잡도는 순차탐색이 N 제곱인 반면 로그2N이다.
 
 0 < target < 2000000 중 숫자 346323를 21번의 시도만에 찾는 굉장히 효율적인 알고리즘이다. 이를 토대로 여러가지 알고리즘에 필요한 역량들을 키워나가야 겠다.
 
@@ -133,8 +133,8 @@ ESLint 와 Prettier 를 사용하는데 option 들이 정말 많고 프로그램
 
 ```javascript
 function test() {
-  console.log(this)
-};
+  console.log(this);
+}
 // test() === window.test()
 // 위의 두 경우가 같기 때문에
 // 결국 함수 호출도 method 호출의 한 부분이다
@@ -142,13 +142,13 @@ function test() {
 
 ```javascript
 let obj = {
-  fn: function(a, b) {
+  fn: function (a, b) {
     return this;
-	}
+  },
 };
 
 let obj2 = {
-  method: obj.fn
+  method: obj.fn,
 };
 
 console.log(obj.fn() === obj); // true
@@ -166,20 +166,20 @@ class Rectangle {
     this.width = width;
     this.height = height;
   }
-  
+
   getArea() {
     return this.width * this.height;
   }
 
   printArea() {
-    console.log('사각형의 넓이는 ' + this.getArea() + ' 입니다');
+    console.log("사각형의 넓이는 " + this.getArea() + " 입니다");
   }
-  
+
   printSync() {
     // 즉시 사각형의 넓이를 콘솔에 표시합니다
     this.printArea();
   }
-  
+
   printAsync() {
     // 1초 후 사각형의 넓이를 콘솔에 표시합니다
     setTimeout(this.printArea, 2000);
@@ -188,13 +188,13 @@ class Rectangle {
     setTimeout(this.printArea.bind(this), 2000);
     // 해결방법 2 : 함수실행 시 전역으로 설정된 this 를 담어뒀던 self 값으로 초기화 시켜줘서 해결 가능
     let self = this;
-    setTimeout(function() {
-      self.printArea(); 
-    }, 2000)
+    setTimeout(function () {
+      self.printArea();
+    }, 2000);
     // 해결방법 3 : this 가 상위 context의 this 를 가리키기 때문에 상위 객체인 Rectangle의 인스턴스를 가리킨다.
     setTimeout(() => {
       this.printArea();
-    }, 2000)
+    }, 2000);
   }
 }
 
@@ -207,11 +207,11 @@ let box = new Rectangle(20, 40);
 
 #### OOP 정리 ( OOP 개념, 프로토타입, 상속, Object.create(), ES6 class/super )
 
-[노션 페이지](https://www.notion.so/Object-Oriented-Programming-58716d3cf817472caa2ffb0bb3d4c0e8) 
+[노션 페이지](https://www.notion.so/Object-Oriented-Programming-58716d3cf817472caa2ffb0bb3d4c0e8)
 
 위에 적혀있는 주제를 하나의 노션으로 끝장을 봐버렸다. 참고한 게시물도 5부작으로 긴 호흡을 가지고 썼는데, 쓰다보니 한 페이지에 종합선물세트처럼 전부 들어갔다. 장정 12시간의 결과물이 눈앞에 보이니 뿌듯하다 ^^
 
-정리를 하면서 평소 계속 헷갈렸던 **'프로토타입'**이 어느정도 머릿속에 정리가 되어 개념이 잡혔다. 
+정리를 하면서 평소 계속 헷갈렸던 **'프로토타입'**이 어느정도 머릿속에 정리가 되어 개념이 잡혔다.
 
 객체 지향 프로그래밍이란 어느 하나의 기술에 국한된 것이 아닌, 개발자가 프로그램을 만들어 나갈 때 스며들어가는 개념이다. 객체 지향에 대해 입체적으로 알수록 코드속에서 객체 지향적 개념들이 녹아들어가는 것이다.
 
@@ -266,6 +266,45 @@ let box = new Rectangle(20, 40);
 
 ## 금요일
 
+#### BeesBeesBees 스프린트
 
+전날 정리해둔 OOP 총 정리가 굉장히 도움이 되었다. 사실상 이번 과제는 어제 완성이 되었다고 할 정도로 프로토타입의 개념만 잡혀있으면 어려운 문제는 아니였다. 다만 그 개념을 잡기까지 하루종일이라는 시간이 필요했을 뿐... ㅠ
+
+ES6 부터 도입된 `class` 친구가 그렇게 편할 수가 없다. Prototype, `__proto__`, function prototype object 의 지옥에서 벗어 날 수 있었다. 실제로 코딩을 하면서 느꼈던 편안함은 처음 전개 연산자를 만났을 때의 느낌과 비슷했다.
+
+<br>
+
+#### Subclass Dance Party
+
+페어분의 엄청난 역량으로 꿀벌들을 무사히 설계하고 기획과 과제들을 나누어서 진행하기 시작했다.
 
 ## 주말
+
+#### `.prettierignore` `.eslintignore` `.gitignore`
+
+각각의 시스템을 적용시키고 싶지 않은 친구들을 넣는 파일들이다.
+
+prettierignore => 저장을 하면 파일이 계속 변경되어 그렇게 하지 않아도 되는 or 해선 안되는 파일들을 변경 시켜서 꺼야하는 경우
+
+eslintignore => 아직 설정법이 미숙해서 다루는데 서툴다. ES6 문법이나, 라이브러리의 문법들을 기존의 문법에 맞지 않다고 경고를 계속 날리는 경우가 많았다. 일단 무시하는 쪽으로 처리중인데, 한번 자세히 알아봐야겠다.
+
+gitignore => 깃허브에 올라갈 필요없는, 올라가선 안되는 것들을 담는다. 얼마전 AI 쳇봇 '이루다' 프로젝트에서 깃허브에 학습한 카톡 내용들이 public 으로 나와 있어 논란이 된적이 있었다. Key 값 token 값 유저 데이터등... 노출되선 안되는 파일들은 전부 무시 시켜줘야한다.
+
+<br>
+
+#### Subclass Dance Party
+
+페어분과 거의 주말 내내 매달려서 만들었다. 기획한 걸 노션에 정리하고 과제들을 나누어 진행했다. 뭔가 프로젝트를 진행하는 듯한 느낌이 들었고 서로간의 커뮤니케이션도 매우 중요했다. 나중에 진짜 프로젝트를 들어간다면 이런 느낌일까? 라는 생각과 효율적인 프로젝트 진행을 위해서 서로간의 규칙이 꼭 필요하겠다는 생각이 들었다.
+
+<u>필요한 규칙</u>
+
+- 커밋 메세지 적는 법
+- 브랜치 이름 만드는 법 & 브랜치 활용 전략
+- Git 의 전체적은 Flow 에 관하여
+- 변수 이름 및 함수 이름 작성 법
+- 프로그램 설계 방법 & 구조 짜는 법
+- 이슈가 발생했을 때, 대처방법
+
+사전에 명확하게 협의과정을 거쳐서 문서화 하는 것도 좋은 방법일 것 같다.
+
+댄스파티에 관한 내용은 스포의 위험이 있기 때문에 (아무도 안볼텐데?) 크흠 ... 월요일 TIL 에 적도록 하겠다.
