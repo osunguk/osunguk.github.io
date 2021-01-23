@@ -14,15 +14,15 @@ categories: [codestates]
 
 - 학습할 내용
 
-정렬알고리즘 정리(토이 대비)
+~~정렬알고리즘 정리(토이 대비)~~ 토이 대비가 됬는지는 모르겠다
 
-자바스크립트 인포 정리 ~~(화요일)하나완료~~
+자바스크립트 인포 정리 ~~(화요일)1개~~  ~~(토요일)3개~~
 
 Figma 사용해보기 (윈도우로)
 
-HA 를 대비하기위한 전체적인 코스 복습 ~~this 복습~~ ~~프로토타입 복습~~
+HA 를 대비하기위한 전체적인 코스 복습 ~~this 복습~~ ~~프로토타입 복습~~ oop 복습, 상속 복습, 자료구조 복습
 
-프로그래머스 그래프 문제 다 풀기 1번문제 2번문제 3번문제
+프로그래머스 그래프 문제 다 풀기 1번문제 2번문제 3번문제 => 너무 어렵다ㅜ
 
 <br>
 
@@ -135,4 +135,85 @@ HA 를 대비하기위한 전체적인 코스 복습 ~~this 복습~~ ~~프로토
 <br>
 
 ## 주말
+
+#### 고차함수와 this
+
+줌방에서 해쉬 스프린트에 대해서 얘기를 하다가 this 문제가 발생했다...! ~~(고놈의 this)~~ `forEach` 구문을 썼는데 화살표를 쓰면 정상적으로 작동하고 일반 함수를 쓰면 안된다는 이슈였다. 전에 setTimeout 을 다루다가 발견했던 이상한점과 유사해서 어느정도 에러 핸들링을 해드렸다.
+
+뭔가 명확하게 정리된건 아니여서 토요일(오늘) 코드상으로 직접 콘솔을 찍어보며 정리를 했다.
+
+<br>
+
+#### Timout 객체 해부
+
+이분도 최후의 조상님, 즉 시초시다. 각각의 시간을 다루는 함수들을 ( setTimeout, setInterval ) 다루는 여러가지 함수들이 담겨 있었다.
+
+```javascript
+let test = setTimeout(function () {
+  console.log(this.__proto__); // timeout 객체의__proto__
+  console.log(this === test);
+}, 1000);
+```
+
+위와같이 코드를 작성해서 함수 원형 객체까지 확인을 해봤다.
+
+```javascript
+Timeout { 
+     _idleTimeout: 1000, 
+     _idlePrev: null, 
+     _idleNext: null, 
+     _idleStart: 1281711, 
+     _onTimeout: [Function], 
+     _timerArgs: undefined, 
+     _repeat: null, 
+     _destroyed: true, 
+     [Symbol(refed)]: true, 
+     [Symbol(kHasPrimitive)]: false, 
+     [Symbol(asyncId)]: 12180, 
+     [Symbol(triggerId)]: 20 
+}
+```
+
+해부를 해서 나온 Timeout 객체! 아직 [Symbol...] 관련된 것들은 어떤 의미를 가지는지 모르겠지만 나중에 배울것 같다!! 그리고
+
+```javascript
+Timeout { refresh: [λ],
+  unref: [λ],
+  ref: [λ],
+  hasRef: [λ],
+  close: [λ],
+  [Symbol(nodejs.util.inspect.custom)]: [λ],
+  [Symbol(Symbol.toPrimitive)]: [λ] 
+}
+```
+
+위의 객체의 프로토타입의 모양은 위와같다. 한번더 프로토타입을 타고 올라가봤는데 `undefined` 인걸 보면 여기가 종착지인것 같다. 각각의 함수들이 어떤 동작을 하는지 모르지만 이러한 함수들을 인스턴스들과 공유를 하고 있다는걸 알게 되었다.
+
+<br>
+
+#### node.js 환경과 브라우저 환경은 엄연히 다르다.
+
+같은 동작을 해서 뭔가 동일할 거라 생각했던 내 생각을 무색하게 런타임이 다르다는걸 위의 두가지 주제들을 다루면서 깊게 느꼈다.
+
+[여기](https://nodejs.org/ko/docs/) 에가면 node 환경에서 어떻게 api들을 지원하는지 어떻게 동작되는지 찾아볼 수 있다!!
+
+<br>
+
+#### 다익스트라 알고리즘
+
+최단거리를 구하는 알고리즘으로 네비게이션과같은 곳에서 사용되는 알고리즘이다. 아직 이해하는데 어려움을 겪고 있다.
+
+프로래머스 문제도 난이도가 3부터 시작한다... ㄸㄹㄹ...
+
+<br>
+
+#### 정렬 알고리즘 수도 코드 작성
+
+버블, 삽입, 선택, 병합, 퀵, 힙 정렬을 정리를 했다. 각각의 정렬 원리를 파악했고 각각 어떤 시간복잡도를 가지는지 정리 했다.
+
+[여기](https://www.notion.so/osunguk/7adad1dc84d04b2fbc88097f7c3e8698) 노션으로 정리해 뒀다.
+
+---
+
+
 
