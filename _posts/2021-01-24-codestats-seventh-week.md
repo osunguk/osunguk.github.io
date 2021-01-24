@@ -14,15 +14,19 @@ categories: [codestates]
 
 - 학습할 내용
 
-~~정렬알고리즘 정리(토이 대비)~~ 토이 대비가 됬는지는 모르겠다
+~~정렬알고리즘 정리(토이 대비)~~ 토이 대비가 되는지 모르겠다...
 
-자바스크립트 인포 정리 ~~(화요일)1개~~  ~~(토요일)3개~~
+자바스크립트 인포 정리 ~~(화요일)1개~~  ~~(토요일)3개~~ ~~(일요일)3개~~
 
-Figma 사용해보기 (윈도우로)
+Figma 사용해보기 - 튜토리얼 (윈도우로)
 
-HA 를 대비하기위한 전체적인 코스 복습 ~~this 복습~~ ~~프로토타입 복습~~ oop 복습, 상속 복습, 자료구조 복습
+HA 를 대비하기위한 전체적인 코스 복습 ~~this 복습~~ ~~프로토타입 복습~~ oop 복습, ~~상속 복습~~, 자료구조 복습
 
 프로그래머스 그래프 문제 다 풀기 1번문제 2번문제 3번문제 => 너무 어렵다ㅜ
+
+~~N-Queens 알고리즘 코드 분석~~
+
+깊이 우선, 너비 우선 탐색 공부
 
 <br>
 
@@ -151,7 +155,7 @@ HA 를 대비하기위한 전체적인 코스 복습 ~~this 복습~~ ~~프로토
 ```javascript
 let test = setTimeout(function () {
   console.log(this.__proto__); // timeout 객체의__proto__
-  console.log(this === test);
+  console.log(this === test); // true
 }, 1000);
 ```
 
@@ -215,5 +219,100 @@ Timeout { refresh: [λ],
 
 ---
 
+#### console 객체 해부하기
+
+```javascript
+Object [console] {
+  log: [Function: log],
+  warn: [Function: warn],
+  dir: [Function: dir],
+  time: [Function: time],
+  timeEnd: [Function: timeEnd],
+  timeLog: [Function: timeLog],
+  trace: [Function: trace],
+  assert: [Function: assert],
+  clear: [Function: clear],
+  count: [Function: count],
+  countReset: [Function: countReset],
+  group: [Function: group],
+  groupEnd: [Function: groupEnd],
+  table: [Function: table],
+  debug: [Function: debug],
+  info: [Function: info],
+  dirxml: [Function: dirxml],
+  error: [Function: error],
+  groupCollapsed: [Function: groupCollapsed],
+  Console: [Function: Console],
+  profile: [Function: profile],
+  profileEnd: [Function: profileEnd],
+  timeStamp: [Function: timeStamp],
+  context: [Function: context]
+}
+```
+
+이친구도 결국 객체였다.... 하긴 모든 것이 객체인 마당에 콘솔도 예외일순 없지....
+
+```javascript
+console.log(console.__proto__.prototype); // {} 
+console.log(console.__proto__.__proto__ === Object.prototype); // true
+```
+
+프로토 타입 개념을 배우니 이렇게 궁금한 객체의 원형과 조상을 찾을 수 있는 기술이 생겼다... !!
+
+각 콘솔 메서드의 내용은 [여기](https://www.notion.so/osunguk/f9c16687db6b4d1e9d02f116b521722c) 에다가 정리 해뒀다. 콘솔이 어떻게 생겼는지 너무 궁금해서 직접 [nodejs 깃허브](https://github.com/nodejs/node/blob/v12.20.1/lib/internal/console/constructor.js) 에 가서 이것저것 쳐다봤다. 우리가 배운 js 의 여러 기술들 ( 구조분해 할당, || 으로 초기값 세팅, 전개연산자 등등...) 이 직접 사용되는걸 보니 뭔가 느낌이 색달랐다! 
+
+<br>
+
+#### 시간관리 방법 추가
+
+계획을 세우고 계획을 이행하는데 정확한 목표는 있지만 데드라인이 없다보니 뒤로 계속해서 미루는 경향이 있는 것 같다. 딱 정해진 시간이 없다보니 늘어지는 경우도 많이 생기는 것 같다. 
+
+이러한 문제에 대한 해결책으로 코드 스테이츠가 일정관리를 하듯이 구글 캘린더에 해야할 작업목록과 일정 시간을 설정해서 시간 사용을 조금 더 구체화를 했다.
+
++추가 : 구글 캘린더에 추가하니 30분 전에 알림도 뜬다!
+
+<br>
+
+#### 자바스크립트 인포
+
+지금까지 5-10 구조분해 할당까지 진행을 했다. 이에 대한 TIL 를 따로 안남겼는데 이후부턴 같이 남기도록 해야겠다. (이것도 오늘 배운 것들 중 하나니까!!)
+
+<br>
+
+#### 맵과 셋 그리고 위크맵과 위크 셋
+
+키 값을 객체로 받고 그 객체의 참조가 사라졌을 때, 해당 데이터를 자동으로 삭제해주는 효자 녀석이다
+
+<br>
+
+#### 콘솔로그 꾸미기
+
+브라우저 상에서 콘솔로그에 여러가지 장난을 칠 수 있다. 스타일을 추가할 수 도있고. 크기도 조절가능하다
+
+<br>
+
+#### Class 에서 static 변수 사용하기
+
+해당 클래스의 인스턴스 전부와 공유하는 데이터를 static으로 설정할 수 있었다. 찾아보니 메서드도 비슷한 방법으로 활용가능해 보인다.
+
+<br>
+
+#### 상속 복습
+
+함수형, 프로토타입형, 클래스형 상속을 코드로 전부 다시한번 복습했다. 위에적은 static을 배울 수 있었고 처음부터 다시 작성하니 이제는 명확하게 머리에 남았다.
+
+<br>
+
+#### 구조 분해 할당
+
+파라미터 관리는 구조 분해 할당이 최고인거 같다. 유연하게 받아올 수 있고 순서에 신경쓰지 않아도 되는 강력한 기능이다. nodejs 깃허브에서 소스코드에서도 많이 사용되는걸 볼 수 있었다.
+
+<br>
+
+#### 줌방 단체 공부?
+
+줌방에서 1시간짜리 노래 동영상을 틀고 각자 열심히 공부, 1시간 뒤에 각자 공부한걸 나누고 질문을 하며 진행을 했는데 공부 밀도?라고 해야하나 굉장히 집중도 잘되고 발표를 하면서 정리도되고 발표하기 위한 계획도 세우고 여러가지 이점이 많아서 계속해서 동기분들과 진행해볼 예정이다.
 
 
+
+ 
