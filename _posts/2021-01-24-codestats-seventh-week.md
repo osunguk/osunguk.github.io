@@ -259,7 +259,7 @@ console.log(console.__proto__.__proto__ === Object.prototype); // true
 
 프로토 타입 개념을 배우니 이렇게 궁금한 객체의 원형과 조상을 찾을 수 있는 기술이 생겼다... !!
 
-각 콘솔 메서드의 내용은 [여기](https://www.notion.so/osunguk/f9c16687db6b4d1e9d02f116b521722c) 에다가 정리 해뒀다. 콘솔이 어떻게 생겼는지 너무 궁금해서 직접 [nodejs 깃허브](https://github.com/nodejs/node/blob/v12.20.1/lib/internal/console/constructor.js) 에 가서 이것저것 쳐다봤다. 우리가 배운 js 의 여러 기술들 ( 구조분해 할당, || 으로 초기값 세팅, 전개연산자 등등...) 이 직접 사용되는걸 보니 뭔가 느낌이 색달랐다! 
+각 콘솔 메서드의 내용은 [여기](https://www.notion.so/osunguk/f9c16687db6b4d1e9d02f116b521722c) 에다가 정리 해뒀다. 콘솔이 어떻게 생겼는지 너무 궁금해서 직접 [nodejs 깃허브](https://github.com/nodejs/node/blob/v12.20.1/lib/internal/console/constructor.js) 에 가서 이것저것 쳐다봤다. 우리가 배운 js 의 여러 기술들 ( 구조분해 할당, 조건 연산자로 초기값 세팅, 전개연산자 등등...) 이 직접 사용되는걸 보니 뭔가 느낌이 색달랐다! 
 
 <br>
 
