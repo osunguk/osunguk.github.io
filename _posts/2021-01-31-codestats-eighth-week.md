@@ -142,3 +142,33 @@ console.log(y); // {0: 1, 1: 2, 2: 3, 3: 4}
 
 ## 주말
 
+#### 기명함수
+
+기명함수는 말 그대로 이름이 있는 함수를 뜻한다. 보통 함수를 표현식으로 사용하면 `let func = function(){}` 식으로 많이 사용하는데 기명 함수를 이용하면 생성한 함수에 대한 참조통로?가 하나더 생긴다. 이를 이용해서 
+
+```javascript
+let hamsu = function func(txt) {
+	if(txt) {
+		console.log(`${txt}`);
+	} else {
+		func("empty parameter"); // empty parameter
+//  hamsu("empty parameter"); // TypeError: sayHi is not a function
+	}
+}
+
+let work = sayHi;
+hamsu = null;
+
+work();
+```
+
+위와 같이 hamsu 에 null 값으로 초기화가 되어도 생성한 함수에 대한 참조가 남아있기 때문에 에러없이 사용할 수 있다.
+
+<br>
+
+#### `new Function`
+
+함수를 만드는 secret한 방법, 함수의 내용이 스트링으로 들어오는 경우 사용한다. (아마 쓸일이 있을까?)
+
+<br>
+
