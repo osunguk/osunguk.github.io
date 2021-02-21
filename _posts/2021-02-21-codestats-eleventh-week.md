@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 코드 스테이츠 주차
+title: 코드 스테이츠 11주차
 categories: [codestates]
 ---
 
@@ -14,7 +14,7 @@ categories: [codestates]
 ## 학습할 내용
 
 - 스토리북
-- SSR CSR
+- ~~SSR CSR~~
 
 <br>
 
